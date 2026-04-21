@@ -1,0 +1,38 @@
+# --- Terraform Versioning & State ---
+# Local .terraform directories containing provider binaries
+.terraform/
+
+# Distributed state files
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# --- Terraform Variables & Sensitive Info ---
+# Exclude all variable files (may contain secrets)
+*.tfvars
+*.tfvars.json
+
+# Exclude specific override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# --- Terraform CLI Configuration ---
+.terraformrc
+terraform.rc
+
+# --- Environment & Credentials ---
+# In case you use .env files for AWS keys or local testing
+.env
+.aws/
+.credentials
+
+# --- OS & IDE Specific ---
+.DS_Store
+.vscode/
+.idea/
+*.swp
