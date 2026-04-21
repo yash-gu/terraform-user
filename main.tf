@@ -1,4 +1,4 @@
-# --- 1. PROVIDER & VARIABLES ---
+
 provider "aws" {
   region = "us-east-1"
 }
@@ -7,7 +7,7 @@ variable "vpc_id"          { default = "vpc-0123456789abcdef0" }
 variable "public_subnets"  { default = ["subnet-111", "subnet-222"] }
 variable "private_subnets" { default = ["subnet-333", "subnet-444"] }
 
-# --- 2. SECURITY & EDGE (WAF + LB) ---
+
 resource "aws_wafv2_web_acl" "global_waf" {
   name     = "uber-scale-waf"
   scope    = "REGIONAL"
@@ -31,7 +31,7 @@ resource "aws_lb" "ingress_lb" {
   subnets            = var.public_subnets
 }
 
-# --- 3. REAL-TIME PIPELINES (KAFKA) ---
+
 resource "aws_kms_key" "kafka_key" { 
   description = "Encryption key for Kafka" 
 }
@@ -52,7 +52,6 @@ resource "aws_msk_cluster" "event_pipeline" {
   }
 }
 
-# --- 4. GEOSPATIAL & STATE (REDIS + DYNAMODB) ---
 resource "aws_elasticache_replication_group" "geo_index" {
   replication_group_id = "uber-geo-index"
   description          = "Redis for Geo-sharding driver positions" # Changed name
