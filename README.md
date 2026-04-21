@@ -1,5 +1,4 @@
 
-<img width="944" height="535" alt="image" src="https://github.com/user-attachments/assets/ea4dfee9-fa21-4534-afe7-5e81021c4eac" />
  Uber-Scale System Design & Infrastructure (IaC) 🚗💨
 
 A high-performance, distributed backend architecture designed to handle real-time ride-sharing logistics at scale. This project combines deep **System Design** principles with automated **Infrastructure as Code (IaC)** using Terraform on AWS.
@@ -8,7 +7,8 @@ A high-performance, distributed backend architecture designed to handle real-tim
 
 I mapped out the system to handle millions of concurrent requests, focusing on low-latency matching and high-availability data streams.
 
-![Uber System Design Architecture](./architecture-diagram.png) 
+<img width="944" height="535" alt="image" src="https://github.com/user-attachments/assets/ea4dfee9-fa21-4534-afe7-5e81021c4eac" />
+
 > *Tip: Save your architecture image as 'architecture-diagram.png' in your repository root to display it here.*
 
 ### Key Architectural Decisions:
